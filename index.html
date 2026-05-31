@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VON GWA HAHAHHA</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Lucide Icons (Minimal & Clean) -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <!-- Google Fonts for Typography -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="app-container">
+        <header>
+            <div class="logo">
+                <i data-lucide="graduation-cap"></i>
+                <h1>VON GWA HAHAHHA</h1>
+            </div>
+            <p>Your minimalist grade calculator</p>
+        </header>
+
+        <div class="main-content">
+            <!-- Form Section -->
+            <div class="card add-subject-card">
+                <h2><i data-lucide="plus-circle"></i> Add Subject</h2>
+                <form id="grade-form">
+                    <div class="input-group">
+                        <label for="course">Course/Subject (Optional)</label>
+                        <div class="input-wrapper">
+                            <i data-lucide="book-open"></i>
+                            <input type="text" id="course" placeholder="e.g., Programming 101" autocomplete="off">
+                        </div>
+                    </div>
+                    <div class="input-row">
+                        <div class="input-group">
+                            <label for="units">Units</label>
+                            <div class="input-wrapper">
+                                <i data-lucide="layers"></i>
+                                <input type="number" id="units" step="0.5" min="0.5" required placeholder="e.g., 3">
+                            </div>
+                        </div>
+                        <div class="input-group">
+                            <label for="grade">College Grade</label>
+                            <div class="input-wrapper">
+                                <i data-lucide="award"></i>
+                                <input type="number" id="grade" step="0.01" required placeholder="e.g., 1.25">
+                            </div>
+                        </div>
+                    </div>
+                    <button type="submit" class="btn-primary">
+                        <i data-lucide="plus"></i> Add to List
+                    </button>
+                </form>
+            </div>
+
+            <!-- Results Section -->
+            <div class="card result-card">
+                <h2><i data-lucide="calculator"></i> Your GWA</h2>
+                <div class="gwa-display">
+                    <span id="gwa-value">0.0000</span>
+                </div>
+                <div class="stats">
+                    <div class="stat-item">
+                        <span class="stat-label">Total Units</span>
+                        <span id="total-units" class="stat-value">0</span>
+                    </div>
+                </div>
+                <button id="clear-btn" class="btn-secondary">
+                    <i data-lucide="trash-2"></i> Clear All Data
+                </button>
+            </div>
+        </div>
+
+        <!-- Table Section -->
+        <div class="card table-card">
+            <div class="table-header">
+                <h2><i data-lucide="list"></i> Subjects List</h2>
+            </div>
+            <div class="table-responsive hidden">
+                <table id="subjects-table">
+                    <thead>
+                        <tr>
+                            <th>Subject</th>
+                            <th>Units</th>
+                            <th>Grade</th>
+                            <th class="action-column">Remove</th>
+                        </tr>
+                    </thead>
+                    <tbody id="table-body">
+                        <!-- Rows dynamically populated -->
+                    </tbody>
+                </table>
+            </div>
+            <div id="empty-state" class="empty-state">
+                <i data-lucide="inbox"></i>
+                <p>No subjects added yet. Start by adding one above.</p>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
