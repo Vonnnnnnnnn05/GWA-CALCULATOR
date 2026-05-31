@@ -82,8 +82,56 @@ header p {
 }
 
 @media (max-width: 768px) {
+    body {
+        padding: 24px 16px;
+    }
+
+    .app-container {
+        gap: 20px;
+    }
+
+    .logo h1 {
+        font-size: 2rem;
+    }
+
+    header p {
+        font-size: 0.95rem;
+    }
+
     .main-content {
         grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .card {
+        padding: 24px 20px;
+    }
+
+    .input-row {
+        flex-direction: column;
+        gap: 0;
+    }
+
+    #gwa-value {
+        font-size: 3.5rem;
+    }
+
+    .stat-item {
+        width: 100%;
+        padding: 12px 20px;
+    }
+
+    th, td {
+        padding: 14px 10px;
+        font-size: 0.9rem;
+    }
+
+    th {
+        font-size: 0.7rem;
+    }
+
+    .empty-state {
+        padding: 50px 10px;
     }
 }
 
